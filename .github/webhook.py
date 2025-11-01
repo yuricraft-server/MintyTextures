@@ -58,7 +58,6 @@ def main():
     payload = {
         "username": "Yuri Inspector",
         "avatar_url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024",
-        "embeds": [embed],
         "flags": 32768,
         "components": [
             {
