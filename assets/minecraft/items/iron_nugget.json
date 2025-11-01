@@ -66,6 +66,13 @@
           "type": "minecraft:model",
           "model": "mintytex:item/osage_wordle"
         }
+      },
+      {
+        "when": "osagebwaa",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/osagebwaa"
+        }
       }
     ],
     "fallback": {
