@@ -6,9 +6,17 @@ import json
 def main():
     release = json.load(sys.stdin)
 
-    repo = os.environ.get("REPO", "")
+    # Derive repo name (strip org/owner if present). Fall back to release.repository.name
+    repo_env = os.environ.get("REPO", "")
+    if "/" in repo_env:
+        repo_name = repo_env.split("/")[-1]
+    elif repo_env:
+        repo_name = repo_env
+    else:
+        repo_name = release.get("repository", {}).get("name", "")
+
     tag = os.environ.get("TAG", release.get("tag_name", ""))
-    title = f"{repo} {tag}"
+    title = f"{repo_name} {tag}".strip()
 
     color = 0x9BB6A7
 
@@ -34,9 +42,11 @@ def main():
         }
     ]
 
+    # Include a non-empty content field (title) so some Discord clients will render components/buttons
     payload = {
         "username": "Yuri inspector",
         "avatar_url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024",
+        "content": title,
         "embeds": [embed],
         "components": components,
     }
