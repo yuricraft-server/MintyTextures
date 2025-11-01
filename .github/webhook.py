@@ -34,7 +34,12 @@ def main():
         }
     ]
 
-    payload = {"embeds": [embed], "components": components}
+    payload = {
+        "username": "Yuri inspector",
+        "avatar_url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024",
+        "embeds": [embed],
+        "components": components,
+    }
     json.dump(payload, sys.stdout)
 
 
