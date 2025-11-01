@@ -2,7 +2,6 @@ import os
 import sys
 import json
 
-
 def main():
     release = json.load(sys.stdin)
 
@@ -30,28 +29,40 @@ def main():
     if not asset_url:
         asset_url = release_url
 
-    embed = {"title": title, "color": color}
+    embed = {
+        "title": title,
+        "color": color,
+        "description": "Click the buttons below for more options."
+    }
 
     components = [
         {
             "type": 1,
             "components": [
-                {"type": 2, "style": 5, "label": "download", "url": asset_url},
-                {"type": 2, "style": 5, "label": "view release", "url": release_url},
-            ],
+                {
+                    "type": 2,
+                    "style": 5,
+                    "label": "Download",
+                    "url": asset_url
+                },
+                {
+                    "type": 2,
+                    "style": 5,
+                    "label": "View Release",
+                    "url": release_url
+                }
+            ]
         }
     ]
 
-    # Include a non-empty content field (title) so some Discord clients will render components/buttons
     payload = {
-        "username": "Yuri inspector",
+        "username": "Yuri Inspector",
         "avatar_url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024",
-        "content": title,
         "embeds": [embed],
-        "components": components,
+        "components": components,  # Ensure buttons are at this level
     }
+    
     json.dump(payload, sys.stdout)
-
 
 if __name__ == "__main__":
     main()
