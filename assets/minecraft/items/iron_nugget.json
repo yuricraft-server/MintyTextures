@@ -1,0 +1,76 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "minty",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/minty"
+        }
+      },
+      {
+        "when": "tewa",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/tewa"
+        }
+      },
+      {
+        "when": "isabelle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/isabelle"
+        }
+      },
+      {
+        "when": "log",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/log"
+        }
+      },
+      {
+        "when": "chop",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/chop"
+        }
+      },
+      {
+        "when": "axf4",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/axf4"
+        }
+      },
+      {
+        "when": "dummy",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/dummy"
+        }
+      },
+      {
+        "when": "yuri inspector",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/yuri_inspector"
+        }
+      },
+      {
+        "when": "osage wordle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/osage_wordle"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/iron_nugget"
+    }
+  }
+}

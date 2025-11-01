@@ -31,7 +31,7 @@ def main():
     embed = {
         "title": title,
         "color": color,
-        "description": f"[DOWNLOAD](<{asset_url}>)\n[VIEW RELEASE](<{release_url}>)"
+        "description": f"[Download](<{asset_url}>)\n[View Release](<{release_url}>)"
     }
 
     embed = {
