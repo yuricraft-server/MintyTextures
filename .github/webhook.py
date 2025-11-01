@@ -32,7 +32,7 @@ def main():
     embed = {
         "title": title,
         "color": color,
-        "description": "Click the buttons below for more options."
+        "description": "bwaa"
     }
 
     components = [
@@ -43,13 +43,13 @@ def main():
                     "type": 2,
                     "style": 5,
                     "label": "Download",
-                    "url": asset_url
+                    "url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024"
                 },
                 {
                     "type": 2,
                     "style": 5,
                     "label": "View Release",
-                    "url": release_url
+                    "url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024"
                 }
             ]
         }
@@ -59,7 +59,26 @@ def main():
         "username": "Yuri Inspector",
         "avatar_url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024",
         "embeds": [embed],
-        "components": components,  # Ensure buttons are at this level
+        "flags": 32768,
+        "components": [
+            {
+                "type": 1,
+                "components": [
+                    {
+                        "type": 2,
+                        "style": 5,
+                        "label": "Download",
+                        "url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024"
+                    },
+                    {
+                        "type": 2,
+                        "style": 5,
+                        "label": "View Release",
+                        "url": "https://cdn.discordapp.com/avatars/1427680032305971300/1fe529c06f7534ce9a30ceacd5c63c08.png?size=1024"
+                    }
+                ]
+            }
+        ],  # Ensure buttons are at this level
     }
     
     json.dump(payload, sys.stdout)
