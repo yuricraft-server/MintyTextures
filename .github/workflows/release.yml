@@ -46,3 +46,19 @@ jobs:
           files: release.zip
           draft: false
           prerelease: false
+
+      - name: Notify Discord
+        env:
+          WEBHOOK_URL: ${{ secrets.webhook }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG=${{ github.event.inputs.version }}
+          REPO=${{ github.repository }}
+
+          release_json=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" "https://api.github.com/repos/${REPO}/releases/tags/${TAG}")
+
+          export REPO TAG
+          payload=$(echo "$release_json" | python .github/webhook.py)
+
+          curl -s -H "Content-Type: application/json" -d "$payload" "${WEBHOOK_URL}"
