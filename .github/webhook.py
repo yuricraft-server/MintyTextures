@@ -31,7 +31,8 @@ def main():
     embed = {
         "title": title,
         "color": color,
-        "description": f"[Download](<{asset_url}>)\n[View Release](<{release_url}>)"
+        "description": f"[Download](<{asset_url}>)\n[View Release](<{release_url}>)",
+        "thumbnail": f"https://raw.githubusercontent.com/yuricraft-server/{repo_name}/refs/heads/main/.github/thumbnail.png"
     }
 
     embed = {
