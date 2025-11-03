@@ -73,6 +73,13 @@
           "type": "minecraft:model",
           "model": "mintytex:item/osagebwaa"
         }
+      },
+      {
+        "when": "olives",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/olives"
+        }
       }
     ],
     "fallback": {
