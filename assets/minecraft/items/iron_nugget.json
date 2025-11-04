@@ -80,6 +80,13 @@
           "type": "minecraft:model",
           "model": "mintytex:item/olives"
         }
+      },
+      {
+        "when": "pqhenri",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/pqhenri"
+        }
       }
     ],
     "fallback": {

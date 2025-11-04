@@ -1,0 +1,6 @@
+{
+  "parent": "mintytex:item/large_item",
+  "textures": {
+    "layer0": "mintytex:item/pqhenri"
+  }
+}
