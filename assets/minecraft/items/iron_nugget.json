@@ -87,6 +87,20 @@
           "type": "minecraft:model",
           "model": "mintytex:item/pqhenri"
         }
+      },
+      {
+        "when": "hamado",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/hamado"
+        }
+      },
+      {
+        "when": "lumi",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/lumi"
+        }
       }
     ],
     "fallback": {
