@@ -27,8 +27,6 @@ def main():
             installer = a.get("browser_download_url") or ""
 
     release_url = release.get("html_url", "")
-    if not asset_url:
-        asset_url = release_url
 
     embed = {
         "title": title,

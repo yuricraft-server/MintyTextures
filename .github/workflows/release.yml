@@ -23,10 +23,13 @@ jobs:
       - name: Create release zip
         run: |
           zip -r MintyTextures.zip assets/ pack.png pack.mcmeta
-      
+          if [ -f MintyTextures.zip ]; then echo "MintyTextures.zip created successfully"; else echo "MintyTextures.zip creation failed"; fi
+
       - name: Create update zip
         run: |
           zip -r installer-windows.zip MintyTextures.zip installer.bat
+          if [ -f installer-windows.zip ]; then echo "installer-windows.zip created successfully"; else echo "installer-windows.zip creation failed"; fi
+
 
       - name: Create and push tag
         env:
