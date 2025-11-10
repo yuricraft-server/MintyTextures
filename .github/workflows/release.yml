@@ -27,7 +27,8 @@ jobs:
 
       - name: Create update zip
         run: |
-          zip -r installer-windows.zip MintyTextures.zip installer.bat
+          if [ -f update.bat ]; then rm update.bat
+          zip -r installer-windows.zip MintyTextures.zip installer.bat fi
           if [ -f installer-windows.zip ]; then echo "installer-windows.zip created successfully"; else echo "installer-windows.zip creation failed"; fi
 
 
