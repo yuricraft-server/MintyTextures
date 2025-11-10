@@ -22,7 +22,11 @@ jobs:
 
       - name: Create release zip
         run: |
-          zip -r release.zip assets/ pack.png pack.mcmeta
+          zip -r MintyTextures.zip assets/ pack.png pack.mcmeta
+      
+      - name: Create update zip
+        run: |
+          zip -r installer-windows.zip MintyTextures.zip installer.bat
 
       - name: Create and push tag
         env:
@@ -43,7 +47,9 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.version }}
           name: ${{ github.event.inputs.version }}
-          files: release.zip
+          files: 
+            MintyTextures.zip
+            installer-windows.zip
           draft: false
           prerelease: false
 

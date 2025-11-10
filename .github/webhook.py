@@ -18,11 +18,13 @@ def main():
 
     color = 0x9BB6A7
 
-    asset_url = ""
+    download = ""
+    installer = ""
     for a in release.get("assets", []):
-        if a.get("name") == "release.zip":
-            asset_url = a.get("browser_download_url") or ""
-            break
+        if a.get("name") == "MintyTextures.zip":
+            download = a.get("browser_download_url") or ""
+        if a.get("name") == "installer-windows.zip":
+            installer = a.get("browser_download_url") or ""
 
     release_url = release.get("html_url", "")
     if not asset_url:
@@ -31,7 +33,7 @@ def main():
     embed = {
         "title": title,
         "color": color,
-        "description": f"[Download](<{asset_url}>)\n[View Release](<{release_url}>)",
+        "description": f"[Download](<{download}>)\n[Download Installer](<{installer}>)\n[View Release](<{release_url}>)",
         "thumbnail": {"url": f"https://raw.githubusercontent.com/yuricraft-server/{repo_name}/refs/heads/main/.github/thumbnail.png"}
     }
 
