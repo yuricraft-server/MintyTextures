@@ -50,7 +50,7 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.version }}
           name: ${{ github.event.inputs.version }}
-          files: 
+          files: |
             MintyTextures.zip
             installer-windows.zip
           draft: false
