@@ -16,5 +16,6 @@ IF NOT EXIST "%location%" (
 )
 
 MOVE "%~dp0\MintyTextures.zip" "%location%"
-echo Restart minecraft to update resources
+MOVE "%~dp0\MintyTextures-updater.bat" "%location%"
+echo Finished installing resources
 SET /p exit=""
