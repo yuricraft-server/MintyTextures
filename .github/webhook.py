@@ -31,7 +31,7 @@ def main():
     embed = {
         "title": title,
         "color": color,
-        "description": f"If you have already installed an older release with the installer, run `resourcepacks/MintyTextures-updater.bat`\n\n[Download](<{download}>)\n[Download Installer](<{installer}>)\n[View Release](<{release_url}>)",
+        "description": f"If you have already installed an older release with the installer,\nrun `resourcepacks/MintyTextures-updater.bat`\n\n[Download](<{download}>)\n[Download Installer](<{installer}>)\n[View Release](<{release_url}>)",
         "thumbnail": {"url": f"https://raw.githubusercontent.com/yuricraft-server/{repo_name}/refs/heads/main/.github/thumbnail.png"}
     }
 
