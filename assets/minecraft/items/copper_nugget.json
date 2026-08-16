@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "pride",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/pride"
+        }
+      },
+      {
+        "when": "lesbian",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/lesbian"
+        }
+      },
+      {
+        "when": "bi",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/bi"
+        }
+      },
+      {
+        "when": "trans",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/trans"
+        }
+      },
+      {
+        "when": "enby",
+        "model": {
+          "type": "minecraft:model",
+          "model": "mintytex:item/enby"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/copper_nugget"
+    }
+  }
+}
